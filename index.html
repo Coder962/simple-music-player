@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<title>Simple Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <audio id="song-audio" src="music/Alive.mp3"></audio>
+<center>
+    <p>    Now Playing    </p>
+</center>
+<div class="cover-image">
+    <img id="album" src="thumbnails/Alive.jpg">
+</div>
+<br>
+<h1 id="music-name" class="music-name">Ikson - Alive</h1>
+<h3 id="artist" class="artist-name">By Ikson</h3>
+<br>
+<div class="song-slider"> 
+<input type="range" value="0" id="seek-bar" class="seek-bar" onchange="seekTo()">
+<span class="song-time">
+<span class="current-time">00:00</span>
+<span class="song-duration">00:00</span>
+</span>
+</div> 
+<br>
+<br>
+<div class="controls">
+    <i id="forward-btn" class="fas fa-step-backward" onclick="prevTrack()"></i>
+    <i id="play-bt" class="fas fa-play" onclick="playpauseTrack()"></i>
+    <i id="backward-btn" class="fas fa-step-forward" onclick="nextTrack()"></i>
+</div>
+</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
